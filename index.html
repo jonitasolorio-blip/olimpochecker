@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpo Checker | Acceso</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="login-card">
+        <div class="logo">
+            <h1>OLIMPO</h1>
+            <p>SISTEMA DE VERIFICACIÓN</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="user">Guerrero (Usuario)</label>
+                <input type="text" id="user" placeholder="Ej: Zeus_99" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="pass">Sello Sagrado (Contraseña)</label>
+                <input type="password" id="pass" placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit" class="btn-login">ASCENDER AL OLIMPO</button>
+        </form>
+        <div id="mensaje" class="error-msg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

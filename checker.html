@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Olimpo | La Forja de Hefesto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="panel-body">
+    <div class="forge-container">
+        <header style="text-align: center; margin-bottom: 30px;">
+            <h1 class="logo" style="font-size: 2.5rem; color: #d4af37; font-family: 'Cinzel', serif;">LA FORJA DE HEFESTO</h1>
+            <p style="color: #888; letter-spacing: 2px;">PROCESANDO EN EL MONTE OLIMPO</p>
+        </header>
+
+        <section class="input-area">
+            <label style="color: #b8860b; font-size: 0.8rem;">EL ORÁCULO (Pega tu lista aquí)</label>
+            <textarea id="listaDatos" placeholder="4123456789012345|01|2028|123" style="height: 150px; margin-top: 10px;"></textarea>
+            <button onclick="forjar()" class="btn-forjar">FORJAR REGISTROS (ALGORITMO LUHN)</button>
+        </section>
+
+        <div class="results-grid">
+            <div class="column zeus-box">
+                <h3 style="color: #ffd700; font-family: 'Cinzel'; margin-bottom: 10px;">⚡ RAYOS DE ZEUS (VÁLIDAS)</h3>
+                <div id="validas"></div>
+            </div>
+            <div class="column hades-box">
+                <h3 style="color: #ff4444; font-family: 'Cinzel'; margin-bottom: 10px;">🌑 INFRAMUNDO (INVÁLIDAS)</h3>
+                <div id="invalidas"></div>
+            </div>
+        </div>
+    </div>
+    <script src="checker.js"></script>
+</body>
+</html>
