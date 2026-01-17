@@ -18,7 +18,7 @@
         <form id="loginForm">
             <div class="input-group">
                 <label for="user">Guerrero (Usuario)</label>
-                <input type="text" id="user" placeholder="Ej: Zeus_99" required>
+                <input type="text" id="user" placeholder="Ej: Zeus" required>
             </div>
             
             <div class="input-group">
@@ -31,6 +31,24 @@
         <div id="mensaje" class="error-msg"></div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+    <script>
+      // Tu configuración real integrada
+      const firebaseConfig = {
+        apiKey: "AIzaSyD7o6IpQj9fEjJB2HurmxhozW5jP2d5BHs",
+        authDomain: "olimpo-checker.firebaseapp.com",
+        projectId: "olimpo-checker",
+        storageBucket: "olimpo-checker.firebasestorage.app",
+        messagingSenderId: "718218470704",
+        appId: "1:718218470704:web:80dcd26cd91e71216194f5",
+        measurementId: "G-6HHHLMBJ3H"
+      };
+      
+      // Conexión oficial
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
