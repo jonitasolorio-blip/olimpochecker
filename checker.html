@@ -8,28 +8,43 @@
 </head>
 <body class="panel-body">
     <div class="forge-container">
-        <header style="text-align: center; margin-bottom: 30px;">
+        <header style="text-align: center; margin-bottom: 30px; position: relative;">
             <h1 class="logo" style="font-size: 2.5rem; color: #d4af37; font-family: 'Cinzel', serif;">LA FORJA DE HEFESTO</h1>
-            <p style="color: #888; letter-spacing: 2px;">PROCESANDO EN EL MONTE OLIMPO</p>
+            <button onclick="cerrarSesion()" style="background:none; border:1px solid #b8860b; color:#b8860b; cursor:pointer; padding:5px 10px; font-family:'Cinzel'; position: absolute; right: 0; top: 0;">Salir</button>
         </header>
 
         <section class="input-area">
-            <label style="color: #b8860b; font-size: 0.8rem;">EL ORÁCULO (Pega tu lista aquí)</label>
-            <textarea id="listaDatos" placeholder="4123456789012345|01|2028|123" style="height: 150px; margin-top: 10px;"></textarea>
-            <button onclick="forjar()" class="btn-forjar">FORJAR REGISTROS (ALGORITMO LUHN)</button>
+            <label style="color: #b8860b;">EL ORÁCULO (Pega tu lista)</label>
+            <textarea id="listaDatos" placeholder="Ingresa los datos..."></textarea>
+            <button onclick="forjar()" class="btn-forjar">FORJAR REGISTROS</button>
         </section>
 
         <div class="results-grid">
             <div class="column zeus-box">
-                <h3 style="color: #ffd700; font-family: 'Cinzel'; margin-bottom: 10px;">⚡ RAYOS DE ZEUS (VÁLIDAS)</h3>
+                <h3 style="color: #ffd700; font-family: 'Cinzel'; margin-bottom: 10px;">⚡ RAYOS DE ZEUS</h3>
                 <div id="validas"></div>
             </div>
             <div class="column hades-box">
-                <h3 style="color: #ff4444; font-family: 'Cinzel'; margin-bottom: 10px;">🌑 INFRAMUNDO (INVÁLIDAS)</h3>
+                <h3 style="color: #ff4444; font-family: 'Cinzel'; margin-bottom: 10px;">🌑 INFRAMUNDO</h3>
                 <div id="invalidas"></div>
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyD7o6IpQj9fEjJB2HurmxhozW5jP2d5BHs",
+        authDomain: "olimpo-checker.firebaseapp.com",
+        projectId: "olimpo-checker",
+        storageBucket: "olimpo-checker.firebasestorage.app",
+        messagingSenderId: "718218470704",
+        appId: "1:718218470704:web:80dcd26cd91e71216194f5",
+        measurementId: "G-6HHHLMBJ3H"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="checker.js"></script>
 </body>
 </html>
